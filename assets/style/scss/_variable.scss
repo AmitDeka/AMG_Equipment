@@ -1,0 +1,79 @@
+$variable-prefix: amgE- !default;
+
+$primary: #fdb900 !default;
+
+// $success: #179c64 !default;
+// $info: #349ad5 !default;
+// $warning: #fbb034 !default;
+// $danger: #f25042 !default;
+
+$light: #f6f6f6 !default;
+$dark: #222222 !default;
+$paragraph: #383838 !default;
+
+// Font family
+$font-family-sans-serif: "Open Sans", sans-serif !default;
+
+// negative margin
+$enable-negative-margins: true;
+
+$hover-shadow: 0 3px 30px rgba(110, 122, 182, 0.1);
+
+// Body
+$body-bg: $light !default;
+$body-color: $paragraph !default;
+
+// font size
+$font-size-base: 1rem !default;
+
+$h6-font-size: $font-size-base * 1.333 !default;
+$h5-font-size: $h6-font-size * 1.333 !default;
+$h4-font-size: $h5-font-size * 1.333 !default;
+$h3-font-size: $h4-font-size * 1.333 !default;
+$h2-font-size: $h3-font-size * 1.333 !default;
+$h1-font-size: $h2-font-size * 1.333 !default;
+
+$font-size-xl: $font-size-base * 1.5 !default;
+$font-size-xxl: $font-size-base * 2 !default;
+
+// Headings
+$headings-color: $dark !default;
+
+// // Button border
+// $btn-border-width: 2px;
+// $btn-link-hover-color: $light;
+// $btn-font-weight: 500;
+
+// // Border radius
+// $border-radius-lg: 0.625rem !default;
+
+// Padding
+$p-1: 0.25rem !default;
+$p-2: 0.5rem !default;
+$p-3: 0.75rem !default;
+$p-4: 1rem !default;
+
+// Caret
+$caret-vertical-align: 0.2em;
+
+// Gradient
+$enable-gradient: true;
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// Navbar
+$navbar-padding-y: 1.25rem;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#f6f6f6' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-toggler-border-color: transparent !default;
+$navbar-toggler-focus-width: 0px !default;
+$navbar-light-color: rgba($light, 1);
+$navbar-light-hover-color: rgba($light, 0.8);
+$navbar-light-active-color: rgba($light, 0.9);
+$navbar-nav-link-padding-x: 1rem;

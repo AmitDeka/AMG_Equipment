@@ -1,0 +1,539 @@
+::selection {
+  background-color: $primary;
+  color: $light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.line-clamp-1 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+// Fonts
+.font {
+  &-light {
+    font-weight: 300;
+  }
+  &-regular {
+    font-weight: 400;
+  }
+  &-medium {
+    font-weight: 500;
+  }
+  &-semibold {
+    font-weight: 600;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+}
+
+.line {
+  &_fixed {
+    background-color: $primary;
+    height: 5px;
+    margin-bottom: 1.5rem;
+    width: 150px;
+  }
+}
+
+// Navbar
+.nav-top-bar {
+  background-color: $paragraph;
+  padding: 0.4rem 0;
+  &_text {
+    animation: blink 3s linear infinite;
+    color: $light;
+    font-weight: 500;
+  }
+}
+
+.navbar {
+  &-brand {
+    img {
+      height: 40px;
+      @include breakpoint(md) {
+        height: 43px;
+      }
+      @include breakpoint(xl) {
+        height: 47px;
+      }
+    }
+  }
+  .nav-item a.nav-link {
+    font-weight: 500;
+    &.active {
+      color: $primary !important;
+      font-weight: 700;
+    }
+  }
+}
+
+// Hero section
+.hero {
+  align-items: center;
+  background-image: url("/assets/images/hero_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  .card {
+    background-color: rgba($dark, 0.4);
+  }
+}
+
+// Feature section
+.feature {
+  padding: 2rem 0;
+  &_box {
+    display: grid;
+    padding: 1.5rem 1rem;
+    row-gap: 1rem;
+    transition: 0.3s;
+    img {
+      height: 60px;
+      margin: 0 auto;
+    }
+    &_body {
+      display: grid;
+      row-gap: 0.5rem;
+      text-align: center;
+    }
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+    @include breakpoint(md) {
+      padding: 2rem 1.5rem;
+    }
+    @include breakpoint(xl) {
+      padding: 2.5rem 2rem;
+    }
+  }
+}
+
+// Category section
+.category {
+  padding: 3rem 0 2rem;
+  &_box {
+    display: grid;
+    padding: 1rem 0.5rem;
+    row-gap: 1rem;
+    transition: 0.3s;
+    img {
+      height: 60px;
+      margin: 0 auto;
+      @include breakpoint(md) {
+        height: 75px;
+      }
+      @include breakpoint(xl) {
+        height: 90px;
+      }
+    }
+    &_body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      h5 {
+        height: 80px;
+        text-align: center;
+        @include breakpoint(md) {
+          height: 50px;
+        }
+        @include breakpoint(xl) {
+          height: 30px;
+        }
+      }
+      a {
+        margin: 0 auto;
+        width: 100%;
+        @include breakpoint(md) {
+          width: 75%;
+        }
+        @include breakpoint(xl) {
+          width: 50%;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+    @include breakpoint(md) {
+      padding: 1.5rem 1rem;
+    }
+    @include breakpoint(xl) {
+      padding: 1.5rem 1rem;
+    }
+  }
+}
+
+// about us Homepage
+.aboutHome {
+  padding: 3rem 0;
+  &_text {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  &_image {
+    display: flex;
+    justify-content: center;
+    img {
+      box-shadow: 16px 16px 0px $primary;
+      width: 250px;
+      @include breakpoint(md) {
+        width: unset;
+      }
+    }
+  }
+}
+// Testimonial Homepage
+.testimonialHome {
+  background-color: $dark;
+  padding: 3rem 0;
+  &_containerSlider {
+    margin-top: 2rem;
+    padding: 0 1.25rem;
+
+    .slick {
+      &-prev {
+        left: 0rem;
+        &::before {
+          color: $primary;
+        }
+      }
+      &-next {
+        right: 0rem;
+        &::before {
+          color: $primary;
+        }
+      }
+    }
+    @include breakpoint(xl) {
+      padding: 0 2rem;
+    }
+  }
+  &_card {
+    background-color: $dark;
+    border: 0;
+    border-radius: 0px;
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 500px;
+      @include breakpoint(md) {
+        min-height: 300px;
+      }
+      @include breakpoint(xl) {
+        min-height: 230px;
+      }
+    }
+    .testimonialHome_card_icon {
+      float: right;
+      height: 80px;
+      width: 80px;
+    }
+  }
+}
+
+// Top Banner
+.topBanner {
+  align-items: center;
+  background-color: $dark;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  @include breakpoint(md) {
+    height: 240px;
+  }
+  @include breakpoint(xl) {
+    height: 275px;
+  }
+}
+
+// About us page
+.aboutUsPage {
+  padding: 3rem 0;
+  &_text {
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &_image {
+    img {
+      box-shadow: 16px 16px 0px $primary;
+    }
+  }
+}
+
+// Shipping Page
+.shippingPage {
+  padding: 3rem 0;
+  &_text {
+  }
+  &_image {
+  }
+  &_iconBox {
+    box-shadow: $hover-shadow;
+    display: grid;
+    margin-top: 0.75rem;
+    padding: 2rem 1.5rem;
+    place-items: center;
+    row-gap: 1rem;
+    &_body {
+      text-align: center;
+    }
+  }
+}
+
+// Search Page
+.searchPage {
+  padding: 3rem 0;
+  .viewBtn {
+    border-color: $primary;
+    color: $primary;
+    &.active {
+      background-color: $primary;
+      color: $dark;
+    }
+    &:active {
+      border-color: $primary;
+    }
+  }
+  &_searchBox {
+    position: relative;
+    input[type="search"] {
+      padding: 0.75rem 1rem;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    button[type="submit"] {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      &:active {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  &_gridCard {
+    border: 0;
+    border-radius: 0;
+    box-shadow: $hover-shadow;
+    .card-img-top {
+      border-radius: 0;
+      height: 100px;
+      object-fit: fill;
+      object-position: center;
+      @include breakpoint(md) {
+        height: 125px;
+      }
+      @include breakpoint(xl) {
+        height: 150px;
+      }
+    }
+    .card-body {
+      .card-title {
+        font-size: 14px;
+        font-weight: 600;
+        @include breakpoint(md) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  &_listCard {
+    border: 0;
+    border-radius: 0;
+    box-shadow: $hover-shadow;
+    img {
+      border-radius: 0 !important;
+      height: 125px;
+      @include breakpoint(md) {
+        height: 170px;
+      }
+      @include breakpoint(xl) {
+        height: 250px;
+      }
+    }
+    .card-body {
+      .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        @include breakpoint(md) {
+          font-size: 1.33rem;
+        }
+      }
+    }
+  }
+}
+
+// Product Page
+.productPage {
+  padding: 3rem 0;
+  &_sliderBigImages {
+    a {
+      img {
+        height: 400px;
+        margin: auto;
+        object-fit: fill;
+        object-position: center;
+        // width: 400px;
+      }
+    }
+  }
+  &_sliderThumbImages {
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    img {
+      height: 100px;
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+  .slick {
+    &-prev {
+      left: -0.5rem;
+      &::before {
+        color: $primary;
+      }
+    }
+    &-next {
+      right: -0.5rem;
+      &::before {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.relatedProducts {
+  padding: 3rem 0;
+  &_gridCard {
+    border: 0;
+    border-radius: 0;
+    box-shadow: $hover-shadow;
+    .card-img-top {
+      border-radius: 0;
+      height: 215px;
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+}
+
+// Testimonial Page
+.testimonialPage {
+  padding: 3rem 0;
+  &_pills {
+    .nav-item {
+      margin-right: 0.6rem;
+      &:last-of-type {
+        margin-right: 0rem;
+      }
+    }
+    a.nav-link {
+      align-items: center;
+      border: 1px solid $primary;
+      border-radius: 9999px;
+      color: $dark;
+      display: inline-flex;
+    }
+  }
+  &_reviewCard {
+    border: none;
+    box-shadow: $hover-shadow;
+    padding: 0.5rem;
+    &_icon {
+      width: 64px;
+    }
+  }
+}
+
+// contact Us page
+.contactUsPage {
+  padding: 3rem 0;
+  &_address {
+    display: flex;
+    flex-direction: column;
+    &_iconBox {
+      height: fit-content;
+      margin-bottom: 0.4rem;
+      padding: 1rem;
+      transition: 0.3s;
+      width: 100%;
+      @include breakpoint(xl) {
+        width: 80%;
+      }
+      &:hover {
+        box-shadow: $hover-shadow;
+      }
+    }
+  }
+  &_form {
+    &_card {
+      background-color: $white;
+      box-shadow: $hover-shadow;
+      padding: 2.5rem 2rem 3rem;
+      .form-control {
+        border: 0;
+        padding: 0.9rem 1.5rem;
+      }
+      input[type="submit"] {
+        padding: 0.75rem 0;
+      }
+    }
+  }
+}
+
+// Footer section
+.footer {
+  background-color: $paragraph;
+  padding-top: 3rem;
+  &_about {
+    color: $light;
+    display: grid;
+    margin-bottom: 1rem;
+    a {
+      width: fit-content;
+    }
+    img {
+      height: 65px;
+    }
+  }
+  &_icon_list {
+    color: $light;
+    display: grid;
+    font-weight: 500;
+    row-gap: 1rem;
+    li {
+      flex-wrap: wrap;
+    }
+  }
+}

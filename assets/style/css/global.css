@@ -28482,12 +28482,12 @@ html {
 
 .nav-top-bar {
   background-color: #383838;
-  padding: 0.4rem 0;
+  padding: 0.6rem 0;
 }
 .nav-top-bar_text {
-  animation: blink 3s linear infinite;
   color: #f6f6f6;
   font-weight: 500;
+  text-align: end !important;
 }
 
 .navbar-brand img {
@@ -28506,6 +28506,17 @@ html {
 .navbar .nav-item a.nav-link {
   font-weight: 500;
 }
+.navbar .nav-item a.nav-link::after {
+  background: #fdb900;
+  content: "";
+  display: block;
+  height: 5px;
+  transition: width 0.3s;
+  width: 0;
+}
+.navbar .nav-item a.nav-link:hover::after {
+  width: 100%;
+}
 .navbar .nav-item a.nav-link.active {
   color: #fdb900 !important;
   font-weight: 700;
@@ -28513,7 +28524,7 @@ html {
 
 .hero {
   align-items: center;
-  background-image: url("/assets/images/hero_bg.jpg");
+  background-image: url("../../images/hero_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28735,12 +28746,22 @@ html {
   box-shadow: 0 3px 30px rgba(110, 122, 182, 0.1);
   display: grid;
   margin-top: 0.75rem;
-  padding: 2rem 1.5rem;
+  padding: 1rem;
   place-items: center;
   row-gap: 1rem;
 }
 .shippingPage_iconBox_body {
   text-align: center;
+}
+@media (min-width: 768px) {
+  .shippingPage_iconBox {
+    padding: 1.5rem 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .shippingPage_iconBox {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .searchPage {
@@ -28885,6 +28906,7 @@ html {
   padding: 3rem 0;
 }
 .testimonialPage_pills .nav-item {
+  margin-bottom: 0.5rem;
   margin-right: 0.6rem;
 }
 .testimonialPage_pills .nav-item:last-of-type {
@@ -28920,9 +28942,14 @@ html {
   transition: 0.3s;
   width: 100%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .contactUsPage_address_iconBox {
-    width: 80%;
+    padding: 1.25rem 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .contactUsPage_address_iconBox {
+    padding: 1.5rem 1rem;
   }
 }
 .contactUsPage_address_iconBox:hover {
@@ -28931,14 +28958,25 @@ html {
 .contactUsPage_form_card {
   background-color: #fff;
   box-shadow: 0 3px 30px rgba(110, 122, 182, 0.1);
-  padding: 2.5rem 2rem 3rem;
+  padding: 2.5rem 1rem;
 }
 .contactUsPage_form_card .form-control {
   border: 0;
   padding: 0.9rem 1.5rem;
 }
 .contactUsPage_form_card input[type=submit] {
+  margin-bottom: 1rem;
   padding: 0.75rem 0;
+}
+@media (min-width: 768px) {
+  .contactUsPage_form_card {
+    padding: 3rem 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .contactUsPage_form_card {
+    padding: 3rem;
+  }
 }
 
 .footer {

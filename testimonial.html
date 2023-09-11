@@ -31,28 +31,32 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- favicon ends here -->
 
-    <!-- Icon library starts here -->
+    <!-- CSS Library starts-->
+    <!-- boxicons  -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
-    <!-- Icon library starts here -->
-
-    <!-- slick carousel starts  -->
-    <!-- <link rel="stylesheet" href="assets/libs/slickSlider/slick-carousel.css" />
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/libs/animate/animate.min.css" />
+    <!-- slick slider  -->
+    <link rel="stylesheet" href="assets/libs/slickSlider/slick-carousel.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" /> -->
-    <!-- slick carousel ends  -->
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <!-- select2 with bootstrap-5 -->
+    <link href="assets/libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="assets/libs/select2/select2-bootstrap5.css" rel="stylesheet" />
+    <!-- CSS Library ends-->
 
-    <!-- jQuery library starts here -->
-    <!-- <script src="assets/libs/jQuery/jquery_3.7.1.min.js"></script> -->
-    <!-- jQuery library starts here -->
+    <!-- jQuery starts here -->
+    <script src="assets/libs/jQuery/jquery_3.7.1.min.js"></script>
+    <!-- jQuery starts here -->
   </head>
   <body>
     <!-- Navbar starts here -->
     <div class="nav-top-bar d-none d-lg-block">
       <div class="container">
-        <p class="mb-0 text-center nav-top-bar_text">
+        <p class="mb-0 text-end nav-top-bar_text">
           Shipping Available, Only $0.90 a mile.
           <a
             href="shipping.html"
@@ -64,7 +68,7 @@
     </div>
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" href="/">
           <img
             src="assets/images/logo.png"
             class="img-fluid me-xl-4"
@@ -83,41 +87,43 @@
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
           aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="collapse navbar-collapse" id="navbarToggler">
           <ul class="navbar-nav ms-auto me-lg-4 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="">Home</a>
+              <a class="nav-link text-light text-uppercase" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="LOT.html"
+              <a class="nav-link text-light text-uppercase" href="/LOT.html"
                 >our lot</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="shipping.html"
+              <a
+                class="nav-link text-light text-uppercase"
+                href="/shipping.html"
                 >shipping</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="about.html"
+              <a class="nav-link text-light text-uppercase" href="/about.html"
                 >about us</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link text-light text-uppercase active"
-                href="testimonial.html"
+                href="/testimonial.html"
                 >testimonials</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="contact.html"
+              <a class="nav-link text-light text-uppercase" href="/contact.html"
                 >Contact us</a
               >
             </li>
@@ -138,7 +144,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-light text-center font-bold">Testimonials</h2>
+            <h2 class="text-light text-center font-bold topBanner_Title d-none">
+              Testimonials
+            </h2>
           </div>
         </div>
       </div>
@@ -157,7 +165,7 @@
               <!-- <li><i class="bx bx-star"></i></li> -->
             </ul>
             <div class="ms-md-3">
-              <p class="mb-3 mb-md-6 fs-5">
+              <p class="mb-3 mb-md-6 fs-6 fs-lg-5">
                 <span class="font-bold">(4.6)</span>&nbsp;Overall Rating
               </p>
             </div>
@@ -193,17 +201,17 @@
             <div class="row">
               <div class="col-12">
                 <div class="card mb-5 testimonialPage_reviewCard">
-                  <div class="row g-0 align-items-center">
+                  <div class="row g-0">
                     <div
-                      class="col-12 col-md-1 px-4 pt-4 pt-md-0 px-md-0 d-flex justify-content-start justify-content-md-center align-items-center">
+                      class="col-12 col-md-auto px-4 pt-4 pe-md-2 d-flex justify-content-start justify-content-md-center align-items-start">
                       <img
                         src="assets/images/review/google.svg"
                         class="img-fluid rounded-start testimonialPage_reviewCard_icon"
                         alt="Google Icon" />
                     </div>
-                    <div class="col-12 col-md-11">
+                    <div class="col-12 col-md-auto">
                       <div class="card-body">
-                        <h5 class="card-title">Joe d</h5>
+                        <h5 class="card-title font-bold">Joe d</h5>
                         <ul class="list-unstyled d-flex text-primary mb-1">
                           <li><i class="bx bxs-star bx-sm"></i></li>
                           <li><i class="bx bxs-star bx-sm"></i></li>
@@ -218,17 +226,17 @@
                   </div>
                 </div>
                 <div class="card mb-5 testimonialPage_reviewCard">
-                  <div class="row g-0 align-items-center">
+                  <div class="row g-0">
                     <div
-                      class="col-12 col-md-1 px-4 pt-4 pt-md-0 px-md-0 d-flex justify-content-start justify-content-md-center align-items-center">
+                      class="col-12 col-md-auto px-4 pt-4 pe-md-2 d-flex justify-content-start justify-content-md-center align-items-start">
                       <img
                         src="assets/images/review/like.png"
                         class="img-fluid rounded-start testimonialPage_reviewCard_icon"
                         alt="Icon" />
                     </div>
-                    <div class="col-12 col-md-11">
+                    <div class="col-12 col-md-auto">
                       <div class="card-body">
-                        <h5 class="card-title">Angel D</h5>
+                        <h5 class="card-title font-bold">Angel D</h5>
                         <ul class="list-unstyled d-flex text-primary mb-1">
                           <li><i class="bx bxs-star bx-sm"></i></li>
                           <li><i class="bx bxs-star bx-sm"></i></li>
@@ -243,17 +251,17 @@
                   </div>
                 </div>
                 <div class="card mb-5 testimonialPage_reviewCard">
-                  <div class="row g-0 align-items-center">
+                  <div class="row g-0">
                     <div
-                      class="col-12 col-md-1 px-4 pt-4 pt-md-0 px-md-0 d-flex justify-content-start justify-content-md-center align-items-center">
+                      class="col-12 col-md-auto px-4 pt-4 pe-md-2 d-flex justify-content-start justify-content-md-center align-items-start">
                       <img
                         src="assets/images/review/like.png"
                         class="img-fluid rounded-start testimonialPage_reviewCard_icon"
                         alt="Icon" />
                     </div>
-                    <div class="col-12 col-md-11">
+                    <div class="col-12 col-md-auto">
                       <div class="card-body">
-                        <h5 class="card-title">Mar S</h5>
+                        <h5 class="card-title font-bold">Mar S</h5>
                         <ul class="list-unstyled d-flex text-primary mb-1">
                           <li><i class="bx bxs-star bx-sm"></i></li>
                           <li><i class="bx bxs-star bx-sm"></i></li>
@@ -332,8 +340,8 @@
     </footer>
 
     <!-- JS start  -->
-    <!-- <script src="assets/libs/slickSlider/slick-carousel.min.js"></script> -->
-    <!-- <script src="assets/js/global.js"></script> -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/global.js"></script>
     <!-- JS end  -->
   </body>
 </html>

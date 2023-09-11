@@ -31,21 +31,32 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- favicon ends here -->
 
-    <!-- Icon library starts here -->
+    <!-- CSS Library starts-->
+    <!-- boxicons  -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
-    <!-- Icon library starts here -->
+    <!-- animate -->
+    <link rel="stylesheet" href="assets/libs/animate/animate.min.css" />
+    <!-- slick slider  -->
+    <link rel="stylesheet" href="assets/libs/slickSlider/slick-carousel.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <!-- select2 with bootstrap-5 -->
+    <link href="assets/libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="assets/libs/select2/select2-bootstrap5.css" rel="stylesheet" />
+    <!-- CSS Library ends-->
 
-    <!-- jQuery library starts here -->
+    <!-- jQuery starts here -->
     <script src="assets/libs/jQuery/jquery_3.7.1.min.js"></script>
-    <!-- jQuery library starts here -->
+    <!-- jQuery starts here -->
   </head>
   <body>
     <!-- Navbar starts here -->
     <div class="nav-top-bar d-none d-lg-block">
       <div class="container">
-        <p class="mb-0 text-center nav-top-bar_text">
+        <p class="mb-0 text-end nav-top-bar_text">
           Shipping Available, Only $0.90 a mile.
           <a
             href="shipping.html"
@@ -57,7 +68,7 @@
     </div>
     <nav class="navbar navbar-expand-lg bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" href="/">
           <img
             src="assets/images/logo.png"
             class="img-fluid me-xl-4"
@@ -76,43 +87,45 @@
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
           aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="collapse navbar-collapse" id="navbarToggler">
           <ul class="navbar-nav ms-auto me-lg-4 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="">Home</a>
+              <a class="nav-link text-light text-uppercase" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="LOT.html"
+              <a class="nav-link text-light text-uppercase" href="/LOT.html"
                 >our lot</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="shipping.html"
+              <a
+                class="nav-link text-light text-uppercase"
+                href="/shipping.html"
                 >shipping</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light text-uppercase" href="about.html"
+              <a class="nav-link text-light text-uppercase" href="/about.html"
                 >about us</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link text-light text-uppercase"
-                href="testimonial.html"
+                href="/testimonial.html"
                 >testimonials</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link text-light text-uppercase active"
-                href="contact.html"
+                href="/contact.html"
                 >Contact us</a
               >
             </li>
@@ -133,7 +146,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-light text-center font-bold">Contact Us</h2>
+            <h2 class="text-light text-center font-bold topBanner_Title d-none">
+              Contact Us
+            </h2>
           </div>
         </div>
       </div>
@@ -141,42 +156,43 @@
 
     <section class="contactUsPage">
       <div class="container">
-        <h2 class="font-bold fs-3 mb-3">GET IN TOUCH</h2>
+        <h2 class="font-bold fs-2 mb-3">GET IN TOUCH</h2>
+        <div class="line_fixed"></div>
         <p class="mb-10 w-lg-40">
           We will be happy to hear from you, So please feel free to contact us
           using the details bellow.
         </p>
         <div class="row">
-          <div class="col-12 col-md-6 contactUsPage_address">
+          <div class="col-12 col-md-5 col-lg-6 contactUsPage_address">
             <div class="contactUsPage_address_iconBox">
-              <div class="row align-items-center">
-                <div class="col-auto">
+              <div class="row align-items-center gx-4 gy-3">
+                <div class="col-12 col-lg-auto">
                   <i class="bx bxs-envelope bx-md text-primary"></i>
                 </div>
-                <div class="col-auto">
-                  <h6 class="mb-2 font-semibold">EMAIL ADDRESS</h6>
+                <div class="col-12 col-lg-auto">
+                  <h6 class="mb-2 font-bold">EMAIL ADDRESS</h6>
                   <p class="mb-0 font-medium">sales@amgequipmentsales.com</p>
                 </div>
               </div>
             </div>
             <div class="contactUsPage_address_iconBox">
-              <div class="row align-items-center">
-                <div class="col-auto">
+              <div class="row align-items-center gx-4 gy-3">
+                <div class="col-12 col-lg-auto">
                   <i class="bx bxs-phone bx-md text-primary"></i>
                 </div>
-                <div class="col-auto">
-                  <h6 class="mb-2 font-semibold">PHONE NUMBER</h6>
+                <div class="col-12 col-lg-auto">
+                  <h6 class="mb-2 font-bold">PHONE NUMBER</h6>
                   <p class="mb-0 font-medium">(786) 724-2588 &dash; Office</p>
                 </div>
               </div>
             </div>
             <div class="contactUsPage_address_iconBox">
-              <div class="row align-items-center">
-                <div class="col-auto">
+              <div class="row align-items-center gx-4 gy-3">
+                <div class="col-12 col-lg-auto">
                   <i class="bx bxs-map bx-md text-primary"></i>
                 </div>
-                <div class="col-auto">
-                  <h6 class="mb-2 font-semibold">OUR ADDRESS</h6>
+                <div class="col-12 col-lg-auto">
+                  <h6 class="mb-2 font-bold">OUR ADDRESS</h6>
                   <p class="mb-0 font-medium">
                     11205 SW 312th St, Homestead, FL 33033
                   </p>
@@ -184,9 +200,9 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 contactUsPage_form">
+          <div class="col-12 col-md-7 col-lg-6 contactUsPage_form mt-8 mt-md-0">
             <div class="contactUsPage_form_card">
-              <div class="mb-4">
+              <div class="mb-5">
                 <label for="cf_name" class="form-label visually-hidden"
                   >Name</label
                 >
@@ -197,7 +213,7 @@
                   placeholder="Full Name"
                   required />
               </div>
-              <div class="mb-4">
+              <div class="mb-5">
                 <label for="cf_email" class="form-label visually-hidden"
                   >Email address</label
                 >
@@ -208,7 +224,7 @@
                   placeholder="Your Email"
                   required />
               </div>
-              <div class="mb-4">
+              <div class="mb-5">
                 <label for="cf_subject" class="form-label visually-hidden"
                   >Subject</label
                 >
@@ -219,7 +235,7 @@
                   placeholder="Subject"
                   required />
               </div>
-              <div class="mb-4">
+              <div class="mb-5">
                 <label for="cf_message" class="form-label visually-hidden"
                   >Your Message</label
                 >
@@ -230,7 +246,7 @@
                   rows="4"
                   required></textarea>
               </div>
-              <div class="mb-4">
+              <div class="mb-6">
                 <input
                   type="submit"
                   class="btn btn-primary w-100 rounded-0 font-semibold"
@@ -299,8 +315,8 @@
     </footer>
 
     <!-- JS start  -->
-    <!-- <script src="assets/libs/slickSlider/slick-carousel.min.js"></script> -->
-    <!-- <script src="assets/js/global.js"></script> -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/global.js"></script>
     <!-- JS end  -->
   </body>
 </html>

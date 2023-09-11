@@ -118,7 +118,7 @@ html {
 
 // Feature section
 .feature {
-  padding: 2rem 0;
+  padding: 1rem 0;
   &_box {
     display: grid;
     padding: 1.5rem 1rem;
@@ -147,7 +147,7 @@ html {
 
 // Category section
 .category {
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 1rem;
   &_box {
     display: grid;
     padding: 1rem 0.5rem;
@@ -199,11 +199,14 @@ html {
       padding: 1.5rem 1rem;
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0 2rem;
+  }
 }
 
 // about us Homepage
 .aboutHome {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_text {
     h2 {
       margin-bottom: 1rem;
@@ -220,11 +223,14 @@ html {
       }
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 // Testimonial Homepage
 .testimonialHome {
   background-color: $dark;
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_containerSlider {
     margin-top: 2rem;
     padding: 0 1.25rem;
@@ -269,6 +275,9 @@ html {
       width: 80px;
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 
 // Top Banner
@@ -288,22 +297,31 @@ html {
 
 // About us page
 .aboutUsPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_text {
     h2 {
       margin-bottom: 1.5rem;
     }
   }
   &_image {
+    display: flex;
+    justify-content: center;
     img {
       box-shadow: 16px 16px 0px $primary;
+      width: 275px;
+      @include breakpoint(md) {
+        width: unset;
+      }
     }
+  }
+  @include breakpoint(md) {
+    padding: 3rem 0;
   }
 }
 
 // Shipping Page
 .shippingPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_text {
   }
   &_image {
@@ -325,11 +343,14 @@ html {
       padding: 2rem 1.5rem;
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 
 // Search Page
 .searchPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
   .viewBtn {
     border-color: $primary;
     color: $primary;
@@ -360,17 +381,18 @@ html {
       }
     }
   }
+
   &_gridCard {
     border: 0;
     border-radius: 0;
     box-shadow: $hover-shadow;
     .card-img-top {
       border-radius: 0;
-      height: 100px;
+      height: 175px;
       object-fit: fill;
       object-position: center;
       @include breakpoint(md) {
-        height: 125px;
+        height: 230px;
       }
       @include breakpoint(xl) {
         height: 150px;
@@ -381,7 +403,21 @@ html {
         font-size: 14px;
         font-weight: 600;
         @include breakpoint(md) {
-          font-size: 1rem;
+          font-size: 1.1rem;
+        }
+        @include breakpoint(md) {
+          font-size: 1.2rem;
+        }
+        &::after {
+          background: $primary;
+          content: "";
+          display: block;
+          height: 5px;
+          transition: width 0.3s;
+          width: 0;
+        }
+        &:hover::after {
+          width: 100%;
         }
       }
     }
@@ -405,16 +441,33 @@ html {
         font-size: 1rem;
         font-weight: 600;
         @include breakpoint(md) {
-          font-size: 1.33rem;
+          font-size: 1.1rem;
+        }
+        @include breakpoint(md) {
+          font-size: 1.2rem;
+        }
+        &::after {
+          background: $primary;
+          content: "";
+          display: block;
+          height: 5px;
+          transition: width 0.3s;
+          width: 0;
+        }
+        &:hover::after {
+          width: 25%;
         }
       }
     }
+  }
+  @include breakpoint(md) {
+    padding: 3rem 0;
   }
 }
 
 // Product Page
 .productPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_sliderBigImages {
     a {
       img {
@@ -449,10 +502,13 @@ html {
       }
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 
 .relatedProducts {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_gridCard {
     border: 0;
     border-radius: 0;
@@ -464,11 +520,14 @@ html {
       object-position: center;
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 
 // Testimonial Page
 .testimonialPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_pills {
     .nav-item {
       margin-bottom: 0.5rem;
@@ -493,11 +552,14 @@ html {
       width: 64px;
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 
 // contact Us page
 .contactUsPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
   &_address {
     display: flex;
     flex-direction: column;
@@ -539,12 +601,15 @@ html {
       }
     }
   }
+  @include breakpoint(md) {
+    padding: 3rem 0;
+  }
 }
 
 // Footer section
 .footer {
   background-color: $paragraph;
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   &_about {
     color: $light;
     display: grid;
@@ -564,5 +629,8 @@ html {
     li {
       flex-wrap: wrap;
     }
+  }
+  @include breakpoint(md) {
+    padding-top: 3rem;
   }
 }

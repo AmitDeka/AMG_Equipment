@@ -28537,7 +28537,7 @@ html {
 }
 
 .feature {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 .feature_box {
   display: grid;
@@ -28569,7 +28569,7 @@ html {
 }
 
 .category {
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 1rem;
 }
 .category_box {
   display: grid;
@@ -28638,9 +28638,14 @@ html {
     padding: 1.5rem 1rem;
   }
 }
+@media (min-width: 768px) {
+  .category {
+    padding: 3rem 0 2rem;
+  }
+}
 
 .aboutHome {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .aboutHome_text h2, .aboutHome_text .h2 {
   margin-bottom: 1rem;
@@ -28658,10 +28663,15 @@ html {
     width: unset;
   }
 }
+@media (min-width: 768px) {
+  .aboutHome {
+    padding: 3rem 0;
+  }
+}
 
 .testimonialHome {
   background-color: #222222;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .testimonialHome_containerSlider {
   margin-top: 2rem;
@@ -28710,6 +28720,11 @@ html {
   height: 80px;
   width: 80px;
 }
+@media (min-width: 768px) {
+  .testimonialHome {
+    padding: 3rem 0;
+  }
+}
 
 .topBanner {
   align-items: center;
@@ -28730,17 +28745,32 @@ html {
 }
 
 .aboutUsPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .aboutUsPage_text h2, .aboutUsPage_text .h2 {
   margin-bottom: 1.5rem;
 }
+.aboutUsPage_image {
+  display: flex;
+  justify-content: center;
+}
 .aboutUsPage_image img {
   box-shadow: 16px 16px 0px #fdb900;
+  width: 275px;
+}
+@media (min-width: 768px) {
+  .aboutUsPage_image img {
+    width: unset;
+  }
+}
+@media (min-width: 768px) {
+  .aboutUsPage {
+    padding: 3rem 0;
+  }
 }
 
 .shippingPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .shippingPage_iconBox {
   box-shadow: 0 3px 30px rgba(110, 122, 182, 0.1);
@@ -28763,9 +28793,14 @@ html {
     padding: 2rem 1.5rem;
   }
 }
+@media (min-width: 768px) {
+  .shippingPage {
+    padding: 3rem 0;
+  }
+}
 
 .searchPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .searchPage .viewBtn {
   border-color: #fdb900;
@@ -28804,13 +28839,13 @@ html {
 }
 .searchPage_gridCard .card-img-top {
   border-radius: 0;
-  height: 100px;
+  height: 175px;
   object-fit: fill;
   object-position: center;
 }
 @media (min-width: 768px) {
   .searchPage_gridCard .card-img-top {
-    height: 125px;
+    height: 230px;
   }
 }
 @media (min-width: 1200px) {
@@ -28824,8 +28859,24 @@ html {
 }
 @media (min-width: 768px) {
   .searchPage_gridCard .card-body .card-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
+}
+@media (min-width: 768px) {
+  .searchPage_gridCard .card-body .card-title {
+    font-size: 1.2rem;
+  }
+}
+.searchPage_gridCard .card-body .card-title::after {
+  background: #fdb900;
+  content: "";
+  display: block;
+  height: 5px;
+  transition: width 0.3s;
+  width: 0;
+}
+.searchPage_gridCard .card-body .card-title:hover::after {
+  width: 100%;
 }
 .searchPage_listCard {
   border: 0;
@@ -28852,12 +28903,33 @@ html {
 }
 @media (min-width: 768px) {
   .searchPage_listCard .card-body .card-title {
-    font-size: 1.33rem;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 768px) {
+  .searchPage_listCard .card-body .card-title {
+    font-size: 1.2rem;
+  }
+}
+.searchPage_listCard .card-body .card-title::after {
+  background: #fdb900;
+  content: "";
+  display: block;
+  height: 5px;
+  transition: width 0.3s;
+  width: 0;
+}
+.searchPage_listCard .card-body .card-title:hover::after {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .searchPage {
+    padding: 3rem 0;
   }
 }
 
 .productPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .productPage_sliderBigImages a img {
   height: 400px;
@@ -28886,9 +28958,14 @@ html {
 .productPage .slick-next::before {
   color: #fdb900;
 }
+@media (min-width: 768px) {
+  .productPage {
+    padding: 3rem 0;
+  }
+}
 
 .relatedProducts {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .relatedProducts_gridCard {
   border: 0;
@@ -28901,9 +28978,14 @@ html {
   object-fit: fill;
   object-position: center;
 }
+@media (min-width: 768px) {
+  .relatedProducts {
+    padding: 3rem 0;
+  }
+}
 
 .testimonialPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .testimonialPage_pills .nav-item {
   margin-bottom: 0.5rem;
@@ -28927,9 +29009,14 @@ html {
 .testimonialPage_reviewCard_icon {
   width: 64px;
 }
+@media (min-width: 768px) {
+  .testimonialPage {
+    padding: 3rem 0;
+  }
+}
 
 .contactUsPage {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .contactUsPage_address {
   display: flex;
@@ -28978,10 +29065,15 @@ html {
     padding: 3rem;
   }
 }
+@media (min-width: 768px) {
+  .contactUsPage {
+    padding: 3rem 0;
+  }
+}
 
 .footer {
   background-color: #383838;
-  padding-top: 3rem;
+  padding-top: 3.5rem;
 }
 .footer_about {
   color: #f6f6f6;
@@ -29002,4 +29094,9 @@ html {
 }
 .footer_icon_list li {
   flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 3rem;
+  }
 }/*# sourceMappingURL=global.css.map */

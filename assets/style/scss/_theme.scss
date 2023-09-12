@@ -392,10 +392,13 @@ html {
       object-fit: fill;
       object-position: center;
       @include breakpoint(md) {
-        height: 230px;
+        height: 200px;
+      }
+      @include breakpoint(lg) {
+        height: 225px;
       }
       @include breakpoint(xl) {
-        height: 150px;
+        height: 175px;
       }
     }
     .card-body {
@@ -405,7 +408,7 @@ html {
         @include breakpoint(md) {
           font-size: 1.1rem;
         }
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
           font-size: 1.2rem;
         }
         &::after {
@@ -431,6 +434,9 @@ html {
       height: 125px;
       @include breakpoint(md) {
         height: 170px;
+      }
+      @include breakpoint(lg) {
+        height: 200px;
       }
       @include breakpoint(xl) {
         height: 250px;
@@ -460,6 +466,24 @@ html {
       }
     }
   }
+  &_CategoryList {
+    li {
+      margin-bottom: 0.5rem;
+      a {
+        &::after {
+          background: $primary;
+          content: "";
+          display: block;
+          height: 5px;
+          transition: width 0.3s;
+          width: 0;
+        }
+        &:hover::after {
+          width: 25%;
+        }
+      }
+    }
+  }
   @include breakpoint(md) {
     padding: 3rem 0;
   }
@@ -467,43 +491,95 @@ html {
 
 // Product Page
 .productPage {
+  // display: grid;
   padding: 2rem 0;
-  &_sliderBigImages {
+  // place-items: center;
+  // &_sliderBigImages {
+  //   a {
+  //     img {
+  //       height: 400px;
+  //       margin: auto;
+  //       object-fit: fill;
+  //       object-position: center;
+  //       // width: 400px;
+  //     }
+  //   }
+  // }
+  // &_sliderThumbImages {
+  //   margin-top: 1.5rem;
+  //   padding: 0 1rem;
+  //   img {
+  //     height: 100px;
+  //     object-fit: fill;
+  //     object-position: center;
+  //   }
+  // }
+  // .slick {
+  //   &-prev {
+  //     left: -0.5rem;
+  //     &::before {
+  //       color: $primary;
+  //     }
+  //   }
+  //   &-next {
+  //     right: -0.5rem;
+  //     &::before {
+  //       color: $primary;
+  //     }
+  //   }
+  // }
+  // @include breakpoint(md) {
+  //   padding: 3rem 0;
+  // }
+  &_image {
     a {
+      display: grid;
+    }
+    &Big {
+      grid-column: 1 / span 4;
       img {
-        height: 400px;
-        margin: auto;
+        height: 220px;
         object-fit: fill;
         object-position: center;
-        // width: 400px;
+        @include breakpoint(md) {
+          height: 250px;
+        }
+        @include breakpoint(lg) {
+          height: 330px;
+        }
+        @include breakpoint(xl) {
+          height: 445px;
+        }
+      }
+    }
+    &Small {
+      img {
+        height: 75px;
+        object-fit: fill;
+        object-position: center;
+        @include breakpoint(md) {
+          height: 90px;
+        }
+        @include breakpoint(lg) {
+          height: 120px;
+        }
+        @include breakpoint(xl) {
+          height: 140px;
+        }
       }
     }
   }
-  &_sliderThumbImages {
-    margin-top: 1.5rem;
-    padding: 0 1rem;
-    img {
-      height: 100px;
-      object-fit: fill;
-      object-position: center;
+  &_image_container {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    @include breakpoint(md) {
+      gap: 0.625rem;
     }
-  }
-  .slick {
-    &-prev {
-      left: -0.5rem;
-      &::before {
-        color: $primary;
-      }
+    @include breakpoint(lg) {
+      gap: 0.75rem;
     }
-    &-next {
-      right: -0.5rem;
-      &::before {
-        color: $primary;
-      }
-    }
-  }
-  @include breakpoint(md) {
-    padding: 3rem 0;
   }
 }
 
@@ -515,9 +591,18 @@ html {
     box-shadow: $hover-shadow;
     .card-img-top {
       border-radius: 0;
-      height: 215px;
+      height: 195px;
       object-fit: fill;
       object-position: center;
+      @include breakpoint(md) {
+        height: 240px;
+      }
+      @include breakpoint(lg) {
+        height: 190px;
+      }
+      @include breakpoint(xl) {
+        height: 215px;
+      }
     }
   }
   @include breakpoint(md) {

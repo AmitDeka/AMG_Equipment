@@ -388,7 +388,7 @@ html {
     box-shadow: $hover-shadow;
     .card-img-top {
       border-radius: 0;
-      height: 175px;
+      height: 260px;
       object-fit: fill;
       object-position: center;
       @include breakpoint(md) {

@@ -169,23 +169,33 @@ html {
       justify-content: center;
       width: 100%;
       h5 {
-        height: 80px;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        font-size: 1.1rem !important;
+        height: 45px;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
         text-align: center;
-        @include breakpoint(md) {
-          height: 50px;
-        }
         @include breakpoint(xl) {
           height: 30px;
         }
       }
       a {
+        background: linear-gradient(to right, $primary 50%, $light 50%);
+        background-position: right bottom;
+        background-size: 200% 100%;
+        border: 1px solid $primary;
         margin: 0 auto;
+        transition: all 0.5s ease-out;
         width: 100%;
         @include breakpoint(md) {
           width: 75%;
         }
         @include breakpoint(xl) {
           width: 50%;
+        }
+        &:hover {
+          background-position: left bottom;
         }
       }
     }

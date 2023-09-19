@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="assets/libs/animate/animate.min.css" />
     <!-- slick slider  -->
     <link rel="stylesheet" href="assets/libs/slickSlider/slick-carousel.css" />
+    <!-- Plyr.io  -->
+    <link rel="stylesheet" href="assets/libs/plyr/plyr.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
@@ -303,6 +305,17 @@
               <li class="font-bold">NO LOWBALL OFFERS OR TRADES</li>
             </ul>
           </div>
+          <div class="col-12 col-md-10 col-lg-8 mx-auto mt-6">
+            <video
+              id="productVideo"
+              playsinline
+              controls
+              data-poster="assets/video/demo_poster.png"
+              class="img-fluid"
+              style="--plyr-color-main: #fdb900">
+              <source src="assets/video/demo.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     </section>
@@ -432,7 +445,10 @@
 
     <script src="assets/libs/fslightbox/fslightbox.js"></script>
     <script src="assets/libs/slickSlider/slick-carousel.min.js"></script>
-    <script src="assets/js/productPageSlider.js"></script>
+
+    <script src="assets/libs/plyr/plyr.js"></script>
+
+    <script src="assets/js/productPage.js"></script>
 
     <script src="/assets/js/global.js"></script>
 
